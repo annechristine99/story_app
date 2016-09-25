@@ -1,0 +1,12 @@
+<h2>new post</h2>
+
+<%= form_for :prompts, url: prompts_path do |f| %>
+<p>
+<%= f.label :title %><br>
+<%= f.text_field :title %><br>
+</p>
+
+<p>
+<%= f.submit %>
+</p>
+<% end %>
