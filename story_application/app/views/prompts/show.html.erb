@@ -3,4 +3,6 @@
 </h1>
 <p class="date">
 submitted <%= time_ago_in_words(@prompt.created_at) %> ago
+| <%= link_to 'Edit', edit_prompt_path(@prompt) %>
+| <%= link_to 'Delete', prompt_path(@prompt), method: :delete, data: {confirm: "Are you sure?"} %>
 </p>

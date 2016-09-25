@@ -16,11 +16,29 @@ end
 end
 end
 
-
-
-
   def show
     @prompt = Prompt.find(params[:id])
+  end
+
+  def edit
+    @prompt = Prompt.find(params[:id])
+  end
+
+
+  def update
+    @prompt = Prompt.find(params[:id])
+    if @prompt.update(params[:prompt].permit(:title))
+    redirect_to @prompt
+  else
+    render 'edit'
+  end
+  end
+
+  def destroy
+    @prompt = Prompt.find(params[:id])
+    @prompt.destroy
+
+    redirect_to prompts_path
   end
 
   private
