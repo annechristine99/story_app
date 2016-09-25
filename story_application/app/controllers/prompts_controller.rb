@@ -4,14 +4,20 @@ class PromptsController < ApplicationController
   end
 
   def new
+    @prompt = Prompt.new
 end
 
   def create
     @prompt = Prompt.new(prompt_params)
-    @prompt.save
-
+   if @prompt.save
     redirect_to @prompt
-  end
+  else
+    render 'new'
+end
+end
+
+
+
 
   def show
     @prompt = Prompt.find(params[:id])
@@ -19,6 +25,7 @@ end
 
   private
     def prompt_params
-      params.require(:prompts).permit(:title)
+      params.require(:prompt).permit(:title)
     end
-end
+  end
+

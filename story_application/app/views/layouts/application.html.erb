@@ -9,6 +9,25 @@
   </head>
 
   <body>
+  <div id="sidebar">
+  <ul>
+  <li><%= link_to "Categories", root_path %></li>
+  <li>Test: Horror</li>
+  <li>Comedy</li>
+  <li>Fantasy</li>
+  <li>Mystery</li>
+  </ul>
+
+  <div id="main_content">
+  <div class="buttons">
+  <button class="button"><%= link_to "New Prompt", new_prompt_path %></button>
+  <button class="button">Log Out</button>
+
+  <% flash.each do |name, msg| %>
+    <%= content_tag(:div, msg, class: "alert") %>
+  <% end %>
+    </div>
+
     <%= yield %>
   </body>
 </html>
