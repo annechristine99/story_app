@@ -1,3 +1,4 @@
+<div id="prompt_content">
 <h1 class="title">
 <%= @prompt.title %>
 </h1>
@@ -6,3 +7,12 @@ submitted <%= time_ago_in_words(@prompt.created_at) %> ago
 | <%= link_to 'Edit', edit_prompt_path(@prompt) %>
 | <%= link_to 'Delete', prompt_path(@prompt), method: :delete, data: {confirm: "Are you sure?"} %>
 </p>
+
+<div id="stories">
+<h2><%= @prompt.stories.count %> Stories</h2>
+<%= render @prompt.stories %>
+
+<h3> Add a story: </h3>
+<%= render "stories/form" %>
+</div>
+</div>

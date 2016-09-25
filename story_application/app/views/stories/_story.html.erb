@@ -1,0 +1,13 @@
+<div class="story_clearfix">
+<div class="story_content">
+<p class="story_body"><%= story.body %></p>
+<p class="story_time"><%= time_ago_in_words(story.created_at) %> Ago</p>
+</div>
+
+<p><%= link_to 'Delete', [story.prompt, story],
+                method: :delete,
+                class: "button",
+                data: {confirm: 'Are you sure?' } %>
+</p>
+
+</div>
