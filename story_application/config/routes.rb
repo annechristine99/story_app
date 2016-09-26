@@ -4,7 +4,11 @@ Rails.application.routes.draw do
     resources :stories
   end
 
-  root "stories#index"
+  root "categories#index"
 
+  get '/mystery', to: 'categories#mystery'
+  get '/comedy', to: 'categories#comedy'
+  get '/fantasy', to: 'categories#fantasy'
+  get '/horror', to: 'categories#horror'
   get '/flash_fiction', to: 'categories#flash_fiction'
 end

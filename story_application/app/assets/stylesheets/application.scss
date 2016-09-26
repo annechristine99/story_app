@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+@import 'normalize';
+
+body {
+  background-color: purple;
+}
+
+#text_box {
+margin-left:50px;
+    margin-right:50px;
+    border-color: #000000;
+                 border-width: 1px;
+                 border-style: solid;
+                 margin-top: 25%;
+                 margin-bottom: 25%
+}
+
