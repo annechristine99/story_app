@@ -1,10 +1,10 @@
 <h1>this is index.html.erb</h1>
 <% @prompts.each do |prompt| %>
 <div class="prompts_wrapper">
-<h2 class="title"><%= link_to prompt.title, prompt %></h2>
+<h2 class="title"><%# link_to prompt.title, prompt %></h2>
 </div>
-
-<%=link_to "everything", "/prompts" %><br>
 
 
 <% end %>
+
+<%# link_to "New Prompt", new_prompt_path %>

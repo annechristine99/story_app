@@ -4,10 +4,14 @@ class CategoriesController < ApplicationController
   end
 
 def index
-end
-
-def mystery
 
 end
 
+def show
+  @category = Category.find_by(params[:id])
+  @prompts = Prompt.where(:category_id => params[:id])
+  @prompt = Prompt.new
 end
+
+end
+

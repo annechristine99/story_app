@@ -15,12 +15,6 @@ prevented this prompt from saving</h2>
 <p>
 <%= f.label :title %><br>
 <%= f.text_field :title %><br>
-
-<% if @category %>
- <%= f.hidden_field :category_id, :value => @category.id %><br>
-<% else %>
-  <%= f.text_field :category_id %><br>
-<% end %>
 </p>
 
 <p>

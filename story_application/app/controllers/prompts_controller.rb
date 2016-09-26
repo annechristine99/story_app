@@ -44,7 +44,7 @@ end
 
   private
     def prompt_params
-      params.require(:prompt).permit(:title)
+      params.require(:prompt).permit(:title, :category_id)
     end
   end
 

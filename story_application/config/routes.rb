@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :prompts do
-    resources :stories
-  end
 
-  root "categories#index"
 
+    resources :prompts do
+      resources :stories
+    end
+
+  root to: "categories#index"
+  get '/categories', to: 'categories#index'
+
+  get '/categories/:id', to: 'categories#show'
   get '/mystery', to: 'categories#mystery'
   get '/comedy', to: 'categories#comedy'
   get '/fantasy', to: 'categories#fantasy'

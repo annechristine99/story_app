@@ -1,7 +1,6 @@
 <div id="prompt_content">
 <h1 class="title">
 <%= @prompt.title %>
-<%= link_to "Category: #{@prompt.category_id}", "/categories/#{@prompt.category_id}" %>
 </h1>
 <p class="date">
 submitted <%= time_ago_in_words(@prompt.created_at) %> ago

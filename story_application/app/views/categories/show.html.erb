@@ -1,0 +1,9 @@
+<%= @category.name %>
+<% @prompts.each do |prompt| %>
+  <h1> <%= link_to prompt.title, prompt %> </h1>
+  <% prompt.stories.each do |story| %>
+    <p><%= story.body %></p>
+  <% end %>
+<% end %>
+
+<%= render "prompts/form", :locals => {@prompt => @prompt, @category => @category.id} %>
