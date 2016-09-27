@@ -18,15 +18,31 @@
 
 body {
   background-color: purple;
+  background-image: url("galaxies_color_night.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 #text_box {
-margin-left:50px;
-    margin-right:50px;
-    border-color: #000000;
-                 border-width: 1px;
-                 border-style: solid;
-                 margin-top: 25%;
-                 margin-bottom: 25%
+  margin-left:50px;
+  margin-right:50px;
+  border-color: #000000;
+  border-width: 1px;
+  border-style: solid;
+  margin-top: 25%;
+  margin-bottom: 25%;
+  height: 80px;
+  width: 80px;
+}
+
+#header {
+    text-align: center;
+    height:80px;
+    background: black;
+    border:1px solid #CCC;
+    width:960px;
+    margin:0px auto;
+    color: white;
 }
 
